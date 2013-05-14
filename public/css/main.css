@@ -3,7 +3,7 @@
    Author's custom styles
    ========================================================================== */
 body {
-  background: url('../img/black_lozenge.png') repeat;
+  /*background: url('../img/black_lozenge.png') repeat;*/
 }
 .centered {
   margin: auto auto;
@@ -27,25 +27,22 @@ body {
   color: #fff;
 }
 .gallery h2 {
-  font-family: 'Yesteryear', arial, helvetica, sans;
-  color: #eee;
+  font-family: 'Lato', sans-serif;
+  color: #333;
   text-align: center;
   margin-bottom: 15px;
   font-size: 4.5em;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.65em;
-  border-bottom: 1px solid #000;
-  text-shadow: 3px 4px 0px rgba(0, 0, 0, 0.76);
+  border-bottom: 1px solid #ccc;
 }
 .credits a {
   margin-right: 15px;
-  color: #555;
-  border: 1px solid #000;
+  color: #333;
   padding: 5px 15px;
-  background: rgba(0, 0, 0, 0.45);
 }
 .credits a:hover {
-  color: #999;
+  color: #333;
   text-decoration: none;
-  background: #000;
+  background: #eee;
 }
