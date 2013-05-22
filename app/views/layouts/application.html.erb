@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Yolocn</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-        <%= stylesheet_link_tag    "application", :media => "all" %>
-        <%= javascript_include_tag "application" %>
-        <%= csrf_meta_tags %>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic' rel='stylesheet' type='text/css'>
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <script src="js/jquery.easing.1.3.js"></script>
-    </head>
-    <body>
-      <%= yield %>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YoloCN</title>
+    <meta name="description" content="Curated swag" />
+    <meta name="keywords" content="The best swag" />
+    <meta name="author" content="YoloCN" />
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+      <link rel="stylesheet" type="text/css" href="css/hovers.css" />
+      <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic' rel='stylesheet' type='text/css'>
+    <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <!--[if lte IE 8]><style>.main{display:none;} .support-note .note-ie{display:block;}</style><![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="support-note"><!-- let's check browser support with modernizr -->
+          <!--span class="no-cssanimations">CSS animations are not supported in your browser</span-->
+          <span class="no-csstransforms">CSS transforms are not supported in your browser</span>
+          <!--span class="no-csstransforms3d">CSS 3D transforms are not supported in your browser</span-->
+          <span class="no-csstransitions">CSS transitions are not supported in your browser</span>
+          <span class="note-ie">Sorry, only modern browsers.</span>
+        </div>
+      </header>
+      <section class="main">
+        <%= yield %>
+      </section>
+    </div>
 
-      <script src="js/vendor/bootstrap.min.js"></script>
-      <script src="js/plugins.js"></script>
-      <script>
-        // Google analytics
+  <script src="js/vendor/bootstrap.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script>
+    // Google analytics
 
-      </script>
-    </body>
+  </script>
+  </body>
 </html>

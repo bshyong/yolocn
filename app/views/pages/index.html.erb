@@ -2,102 +2,30 @@
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- This code is taken from http://twitter.github.com/bootstrap/examples/hero.html -->
-
 <div class="container gallery">
-    <h2 class="page-title">Products</h2>
 
-    <ul class="thumbnails">
-        <li class="span3">
-            <img class="img-polaroid" src="img/pics/1.jpg" title="Image Title" />
-        </li> <!--end thumb -->
-        <li class="span3">
-            <img class="img-polaroid" src="img/pics/2.jpg" title="Image Title" />
-        </li> <!--end thumb -->
-        <li class="span3">
-            <img class="img-polaroid" src="img/pics/3.jpg" title="Image Title" />
-        </li> <!--end thumb -->
-        <li class="span3">
-            <img class="img-polaroid" src="img/pics/4.jpg" title="Image Title" />
-        </li> <!--end thumb -->
-        <li class="span3">
-            <img class="img-polaroid" src="img/pics/5.jpg" title="Image Title" />
-        </li> <!--end thumb -->
-        <li class="span3">
-            <img class="img-polaroid" src="img/pics/6.jpg" title="Image Title" />
-        </li> <!--end thumb -->
-        <li class="span3">
-            <img class="img-polaroid" src="img/pics/7.jpg" title="Image Title" />
-        </li> <!--end thumb -->
-        <li class="span3">
-            <img class="img-polaroid" src="img/pics/8.jpg" title="Image Title" />
-        </li> <!--end thumb -->
-        <% 4.times do %>
-          <li class="span3">
-              <div class="thumb scroll">
-                  <div class="thumb-wrapper">
-                      <img class="img-polaroid" src="img/pics/8.jpg" title="Image Title" />
-                      <div class="thumb-detail">
-                          <a href="#">
-                              ... content ...
-                          </a>
-                      </div>
-                  </div>
+  <h2 class="page-title">Products</h2>
+        <ul class="ch-grid">
+          <% 12.times do %>
+          <li>
+            <div class="ch-item ch-img-<%= cycle(1,2,3) %>">
+              <div class="ch-info">
+                <h3>Use what you have</h3>
+                <p>by Angela Duncan <a href="http://drbl.in/eOPF">View on Dribbble</a></p>
               </div>
+            </div>
           </li>
-        <% end %>
-    </ul><!--end thumbnails -->
+          <% end %>
+        </ul>
 
-    <footer>
-        <p>&copy; <%= Time.now.year %> YoloCN
-            <span class="pull-right credits">
-                <a href="#">FAQ</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-            </span>
-        </p>
-    </footer>
+  <footer>
+    <p>&copy; <%= Time.now.year %> YoloCN
+      <span class="pull-right credits">
+          <a href="#">FAQ</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+      </span>
+    </p>
+  </footer>
 
 </div> <!-- /container -->
-
-    <script type="text/javascript">
-
-    function setHeight(){
-      $('div.thumb').each(function(){
-          $(this).height($(this).find('img').height());
-      });
-    }
-
-    $(window).resize(function(){
-      setHeight();
-    });
-
-    $(function () {
-      setHeight();
-      if ($('html').hasClass('csstransforms3d')) {
-
-          $('.thumb').removeClass('scroll').addClass('flip');
-          $('.thumb.flip').hover(
-              function () {
-                  $(this).find('.thumb-wrapper').addClass('flipIt');
-              },
-              function () {
-                  $(this).find('.thumb-wrapper').removeClass('flipIt');
-              }
-          );
-
-      } else {
-
-          $('.thumb').hover(
-              function () {
-                  $(this).find('.thumb-detail').stop().animate({bottom:0}, 500, 'easeOutCubic');
-              },
-              function () {
-                  $(this).find('.thumb-detail').stop().animate({bottom: ($(this).height() * -1) }, 500, 'easeOutCubic');
-              }
-          );
-
-      }
-
-    });
-    </script>
