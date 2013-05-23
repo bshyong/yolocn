@@ -42,6 +42,6 @@ gem 'thin'
 gem 'paper_trail', '~> 2'
 gem 'rails_admin'
 
-
-
 gem "devise"
+gem "cancan"
+
