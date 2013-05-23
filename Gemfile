@@ -40,3 +40,8 @@ gem 'thin'
 # gem 'debugger'
 
 gem 'paper_trail', '~> 2'
+gem 'rails_admin'
+
+
+
+gem "devise"
