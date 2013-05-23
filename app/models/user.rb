@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+
+  # ROLES = %w[superadmin admin user]
+  # roles for future use
+  # https://github.com/ryanb/cancan/wiki/Role-Based-Authorization
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
@@ -8,4 +13,5 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
+
 end
