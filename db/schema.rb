@@ -11,15 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130524164031) do
+ActiveRecord::Schema.define(:version => 20130524165910) do
 
   create_table "products", :force => true do |t|
     t.string   "name"
     t.text     "description"
     t.text     "picture_urls"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "price_dollars"
   end
+
+  add_index "products", ["price_dollars"], :name => "index_products_on_price_dollars"
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"

@@ -74,6 +74,12 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
+    money (5.1.1)
+      i18n (~> 0.6.0)
+    money-rails (0.8.1)
+      activesupport (>= 3.0)
+      money (~> 5.1.0)
+      railties (>= 3.0)
     multi_json (1.7.3)
     nested_form (0.3.2)
     nokogiri (1.5.9)
@@ -164,6 +170,7 @@ DEPENDENCIES
   devise
   haml
   jquery-rails
+  money-rails
   paper_trail (~> 2)
   pg
   rails (= 3.2.13)
