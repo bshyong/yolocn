@@ -1,7 +1,6 @@
 Yolocn::Application.routes.draw do
 
-  resources :products
-
+  # resources :products
 
   devise_for :users
 

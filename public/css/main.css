@@ -46,3 +46,8 @@ footer {
   clear:both;
   padding:40px 0px 20px;
 }
+
+a.brand:hover{
+  background:none;
+}
+
