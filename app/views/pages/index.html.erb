@@ -6,22 +6,12 @@
 
   <h2 class="page-title">Products</h2>
     <ul class="ch-grid">
-      <% 12.times do %>
-      <li>
-        <div class="ch-item ch-img-<%= cycle(1,2,3) %>">
-          <div class="ch-info">
-            <h3>Use what you have</h3>
-            <p>by Angela Duncan <a href="#">I want this!</a></p>
-          </div>
-        </div>
-      </li>
-      <% end %>
       <% Product.all.each do |p| %>
       <li>
         <div class="ch-item" style="background: url(<%= p.picture_urls.first %>) no-repeat center;background-size:contain;">
           <div class="ch-info">
-            <h3>Use what you have</h3>
-            <p>by Angela Duncan <a href="#">I want this!</a></p>
+            <h3><%= p.name %></h3>
+            <p><%= p.description %> <a href="#">I want this!</a></p>
           </div>
         </div>
       </li>
