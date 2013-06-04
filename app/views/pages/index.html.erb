@@ -16,6 +16,16 @@
         </div>
       </li>
       <% end %>
+      <% Product.all.each do |p| %>
+      <li>
+        <div class="ch-item" style="background: url(<%= p.picture_urls.first %>) no-repeat center;background-size:contain;">
+          <div class="ch-info">
+            <h3>Use what you have</h3>
+            <p>by Angela Duncan <a href="#">I want this!</a></p>
+          </div>
+        </div>
+      </li>
+      <% end %>
     </ul>
 
     <footer>
